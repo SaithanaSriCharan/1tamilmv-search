@@ -4,11 +4,6 @@
 Search for movie name and get torrent & magnet link directly which are available on 1tamilmv site
 
 
-## Appendix
-
-Any additional information goes here
-
-
 ## Installation
 
 Clone My project
