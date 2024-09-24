@@ -1,0 +1,65 @@
+<style>
+    .data{
+        display: none;
+    }
+    .error_message{
+        display:none;
+        color: red;
+        font-weight: bold;
+    }
+    .error_code{
+        display: none;
+        color: red;
+        font-weight: bold;
+    }
+    a.skyblue-button , input {
+  text-decoration: none !important;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: middle;
+  line-height: normal;
+  background-color: skyblue;
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 13px;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+}
+</style>
+
+<form action="/"><input style="background-color: rgb(112, 112, 112)" type="submit" value="Back" /></form><br>
+{% if (data.status_code == '200') %}
+<style>
+    .data{
+        display: block;
+    }
+</style>
+{% endif  %}
+
+{% if (data.status_code != '200') %}
+<style>
+    .error_code, .error_message{
+        display: block;
+    }
+</style>
+{% endif  %}
+<middle style="text-align: center;">
+<div class="data">
+    <h1>Torrent Data</h1>
+            {% for res in data.result %}
+            <strong style="background-color:#ffffff; color:#000000; font-size:20px; text-align:center">{{ res.name }}</strong><br>
+            <a class="skyblue-button" id="magnet" href='{{ res.magnet }}' rel="">Magnet Link</a>
+            <a style="background-color: rgb(41, 185, 72);" class="skyblue-button" id="torrent" href='{{ res.torrent }}' rel="">Torrent Link</a>
+            <p></p>
+            {%  endfor %}
+
+</div>
+</middle>
+<span class="error_code">Status Code : {{data.status_code}}</span>
+<span class="error_message">Message : {{data.reason}}</span><br>
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+    div#loading {
+    width: 35px;
+    height: 35px;
+    display: none;
+    background: url(/gif/loading-dots.gif) no-repeat;
+    cursor: wait;
+    }
+    .skyblue-button {
+  text-decoration: none !important;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: middle;
+  line-height: normal;
+  background-color: skyblue;
+  color: black;
+  border: none;
+  padding: 3px 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 13px;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: bold;
+}
+</style>
+<h1>Search Movie Torrent</h1>
+
+<form action="/search" method="post">
+    <label for="label">Enter Movie:</label>
+    <input type="text" name="title" placeholder="Movie Name">
+    <input class="skyblue-button" type="submit" value="Submit" onclick="loading();">
+  </form> 
+  <br>
+  <div id="loading"></div>
+  <script type="text/javascript">// <![CDATA[
+    function loading(){
+        $("#loading").show();
+        $("#content").hide();       
+    }
+// ]]></script>
+
+</body>
+</html>
