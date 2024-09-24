@@ -41,11 +41,12 @@ python app.py
 ```
 ## Screenshots
 
-![App Screenshot]([https://via.placeholder.com/468x300?text=App+Screenshot+Here](https://github.com/SaithanaSriCharan/1tamilmv-search/blob/master/Screenshots/Screenshot%202024-09-25%20011527.png?raw=true))
-
-
+![App Screenshot](https://raw.githubusercontent.com/SaithanaSriCharan/1tamilmv-search/refs/heads/master/Screenshots/Screenshot%202024-09-25%20011527.png)
 
 Enter Movie Name and hit on Search, If there any post on 1tamilmv with torrent/magnet link with the movie name, you will see below Screenshot which contains torrent link and magnet link
+
+![App Screenshot](https://raw.githubusercontent.com/SaithanaSriCharan/1tamilmv-search/refs/heads/master/Screenshots/Screenshot%202024-09-25%20011905.png)
+
 ## Authors
 
 - [@SaithanaSriCharan](https://github.com/SaithanaSriCharan)
